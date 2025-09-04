@@ -80,26 +80,17 @@ This project demonstrates a real-time data streaming pipeline for logistics data
 
 ```
 kafka-to-mongodb-stream/
+├── datasets/                   # Source dataset (delivery_trip_truck_data.csv)
 │
-├── producer/               # Producer code (CSV → Kafka)
-│
-├── consumers/              # Consumer code (Kafka → MongoDB with cleansing & deduplication)
-│
-├── config/                 # Configurations (Kafka, MongoDB, Schema Registry)
-│
-├── docker/                 # Dockerfile & docker-compose for consumers
-│
-├── data/                   # Source dataset (delivery_trip_truck_data.csv)
-│
-├── docs/                   # Documentation & architecture diagrams
-│   ├── kafka_mongodb_architecture.png
-│   └── notes.md
-│
-├── output/                 # Logs / processed outputs (optional)
+├── Producer-Cosumer/
+|	├── produce.py          #Producer code (CSV Data - Kafka Topic)
+│   └── Consumer-Group
+|       ├── consumer.py        #Consumer code (Kafka -> MongoDB With Cleansing and Filteration)
+│   	└── docker file
+|		└── docker-compose.yml
 │
 ├── README.md               # Project documentation
 ├── LICENSE                 # License information
-└── .gitignore              # Git ignore file
 ```
 
 # **Key Learning Outcomes**
