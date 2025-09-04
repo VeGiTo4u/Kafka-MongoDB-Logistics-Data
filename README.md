@@ -88,7 +88,8 @@ kafka-to-mongodb-stream/
 |       ├── consumer.py        #Consumer code (Kafka -> MongoDB With Cleansing and Filteration)
 │   	└── docker file
 |		└── docker-compose.yml
-│
+|
+├── Avro Schema
 ├── README.md               # Project documentation
 ├── LICENSE                 # License information
 ```
