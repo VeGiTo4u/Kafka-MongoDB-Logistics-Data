@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  consumer:
+    build: .
+    container_name: logistics_consumer
+    environment:
+      - KAFKA_BOOTSTRAP_SERVERS=pkc-921jm.us-east-2.aws.confluent.cloud:9092
+      - KAFKA_SASL_MECHANISMS=PLAIN
+      - KAFKA_SECURITY_PROTOCOL=SASL_SSL
+      - KAFKA_SASL_USERNAME=FZBOYWFTQJJYEYJI
+      - KAFKA_SASL_PASSWORD=cflt4KkUeQ62wf1l7oaBSPGhtqCBJEbL+/86rxNNj65ZWXCGIQQus+X00dX3HX8g
+      - KAFKA_GROUP_ID=logistics-consumer-group
+      - KAFKA_AUTO_OFFSET_RESET=earliest
+    restart: always
